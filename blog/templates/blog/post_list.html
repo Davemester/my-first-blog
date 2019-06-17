@@ -9,35 +9,16 @@
         <h1><a href=""> Davemester teszt blogja</a> </h1>
 
     </div>
-    <div>
-        <p> Publikálva: 2019.06.17</p>
-        <h2><a href="">Első poszt</a> </h2>
-        <p>Földönfutók lennétek mindenütt.
-S hogy tetszenék az élet oly veszett
-Nép közt, amely fertelmesen dühöngve
-Nem hagyva nektek földjén egy zugot,
-Csak átkozott vasát fenné reátok,
-S mint ebet rúgna, mintha nem is Isten
-Teremtett volna, és az elemek
-Nem szolgálnának épp úgy nektek is,
-Mint őnekik? Mit szólnátok ti ehhez?
-Ilyen az idegenek sorsa itt,
-S ilyen a ti pogány vadságotok!</p>
 
+    {%for post in posts%}
+        <div>
+            <p>publikálva: {{post.published_date}}</p>
+            <h1><a href="">{{post.title}}</a> </h1>
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
 
-    </div>
+    {% endfor %}
 
-<div>
-        <p> Publikálva: 2019.06.17</p>
-        <h2><a href="">Második poszt</a> </h2>
-        <p>Rongyos ruhán át kis bűn is kitetszik;
-Talár s prémes kabát mindent befed.
-Aranyba vond a bűnöd - s az Igazság
-Hiába sújt rá, megtörik vasa;
-Ronggyal fedezd - s átfúrja szalmaszál is.</p>
-
-
-    </div>
 
 </body>
 </html>
